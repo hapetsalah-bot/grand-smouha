@@ -378,3 +378,61 @@ textarea.premium-input {
     text-transform: uppercase;
     letter-spacing: 1px;
 }
+
+/* --- ARABIC & MOBILE FIXES --- */
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap');
+
+body {
+    font-family: 'Cairo', sans-serif !important;
+}
+
+img {
+    max-width: 100% !important;
+    height: auto !important;
+}
+/* --- UNIVERSAL MOBILE OPTIMIZATION --- */
+
+/* 1. Prevent horizontal scrolling on all devices */
+body, html {
+    overflow-x: hidden;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* 2. Responsive layout for screens smaller than 768px (Phones) */
+@media (max-width: 768px) {
+    
+    /* Force images and maps to stay inside the screen */
+    img, iframe {
+        max-width: 100% !important;
+        height: auto !important;
+    }
+
+    /* Stack navigation buttons vertically instead of in a line */
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    /* Stack hero content (Headline + Buttons) */
+    .hero-content {
+        padding: 20px;
+        text-align: center;
+    }
+
+    .action-group {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    /* Make sure the form fields are wide enough to type in */
+    form input, form textarea {
+        width: 90%;
+        margin: 10px auto;
+        display: block;
+    }
+}
